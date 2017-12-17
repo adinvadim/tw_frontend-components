@@ -34,10 +34,10 @@ const createHandler = (
           this[onSuccess].call(this, res);
         }
       } catch (e) {
-        if (e.response && e.response.data && this[onError]) {
+        if (e && e.response && e.response.data && this[onError]) {
           this[onError].call(this, e.response.data);
         } else {
-          throw e;
+          this[onError].call(this, e);
         }
       }
 
