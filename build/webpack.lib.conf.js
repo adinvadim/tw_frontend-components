@@ -25,7 +25,7 @@ var webpackConfig = merge(baseWebpackConfig, {
   devtool: config.lib.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.lib.assetsRoot,
-    filename: utils.assetsLibPath('[name].min.js'),
+    filename: utils.assetsLibPath('[name].js'),
     library: '[name]',
     libraryTarget: 'umd'
   },
@@ -34,12 +34,12 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      sourceMap: true
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   },
+    //   sourceMap: true
+    // }),
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsLibPath('[name].min.css')
