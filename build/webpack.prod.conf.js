@@ -69,7 +69,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     // split your library css/js into separate files
     new webpack.optimize.CommonsChunkPlugin({
-      name: '@tw-core/components'
+      name: 'components'
     }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({

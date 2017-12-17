@@ -10,7 +10,7 @@ function resolve (dir) {
 module.exports = {
   entry: {
     docs: './src/docs.js',
-    ['@tw-core/components']: './src/lib.js'
+    ['components']: './src/lib.js'
   },
   output: {
     path: config.build.assetsRoot,

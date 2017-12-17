@@ -1,16 +1,8 @@
-<script>
+
 import { mapState, mapMutations } from 'vuex';
-import VerificationDialog from '@/domains/debtor/components/TheVerificationDialog/TheVerificationDialog';
-import AcceptFactoringDialog from '@/common/components/TheAcceptFactoringDialog/TheAcceptFactoringDialog';
-import ConfirmDeliveryDialog from '@/common/components/TheConfirmDeliveryDialog/TheConfirmDeliveryDialog';
 
-const modalTypes = {
-  debitorVerification: VerificationDialog,
-  acceptFactoring: AcceptFactoringDialog,
-  confirmDelivery: ConfirmDeliveryDialog,
-};
 
-export default {
+export default modalTypes => ({
   data() {
     return {
       isOpened: true,
@@ -42,5 +34,5 @@ export default {
 
     return null;
   },
-};
-</script>
+});
+

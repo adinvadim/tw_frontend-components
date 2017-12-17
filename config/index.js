@@ -24,7 +24,7 @@ module.exports = {
   lib: {
     env: require('./prod.env'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'lib',
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     productionSourceMap: true,
     productionGzip: false,

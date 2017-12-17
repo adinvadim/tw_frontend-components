@@ -12,7 +12,7 @@ var env = process.env.NODE_ENV === 'testing'
   : config.lib.env
 
 baseWebpackConfig.entry = {
-  '@tw-core/components': './src/lib.js'
+  'components': './src/lib.js'
 }
 
 var webpackConfig = merge(baseWebpackConfig, {
