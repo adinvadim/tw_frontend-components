@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import App from './app'
+import Vue from 'vue';
+import App from './app';
 
-import './styles/app.styl'
+import './common/styles/app.styl';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App)
-})
+  render: h => h(App),
+});

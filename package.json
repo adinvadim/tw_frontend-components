@@ -6,6 +6,9 @@
   "main": "dist/lib/@tw-core/components.min.js",
   "private": false,
   "license": "MIT",
+  "files": [
+	"src"
+  ],
   "scripts": {
     "prepublishOnly": "npm run build",
     "dev": "npm-run-all --parallel dev:lib dev:docs",
@@ -20,6 +23,8 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "clipboard": "^1.7.1",
+    "lodash": "^4.17.4",
     "vue": "^2.3.3"
   },
   "devDependencies": {
@@ -40,6 +45,14 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-html": "^3.0.0",
+    "eslint-config-airbnb-base": "^11.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-flowtype-errors": "^3.3.6",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-vue": "^4.0.0-beta.0",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^2.0.0",
