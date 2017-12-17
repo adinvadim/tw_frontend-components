@@ -1035,7 +1035,7 @@ var createHandler = function createHandler() {
               }
 
               if (!validateFn(value)) {
-                _context.next = 23;
+                _context.next = 19;
                 break;
               }
 
@@ -1056,39 +1056,33 @@ var createHandler = function createHandler() {
               if (this[onSuccess]) {
                 this[onSuccess].call(this, res);
               }
-              _context.next = 19;
+              _context.next = 15;
               break;
 
             case 12:
               _context.prev = 12;
               _context.t0 = _context['catch'](5);
 
-              if (!(_context.t0.response && _context.t0.response.data && this[onError])) {
-                _context.next = 18;
-                break;
+              if (_context.t0 && _context.t0.response && _context.t0.response.data && this[onError]) {
+                this[onError].call(this, _context.t0.response.data);
+              } else {
+                this[onError].call(this, _context.t0);
               }
 
-              this[onError].call(this, _context.t0.response.data);
-              _context.next = 19;
-              break;
-
-            case 18:
-              throw _context.t0;
-
-            case 19:
+            case 15:
 
               this.pending = false;
               if (this[afterAction]) {
                 this[afterAction].call(this);
               }
-              _context.next = 24;
+              _context.next = 20;
               break;
 
-            case 23:
+            case 19:
               // eslint-disable-next-line no-console
               console.error('Form is not valid');
 
-            case 24:
+            case 20:
             case 'end':
               return _context.stop();
           }
