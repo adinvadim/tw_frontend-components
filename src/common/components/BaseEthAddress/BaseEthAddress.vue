@@ -29,10 +29,7 @@ export default {
   },
   computed: {
     truncated() {
-      return `${this.value.substring(0, 6)}...${this.value.substring(
-        this.value.length - 4,
-        this.value.length,
-      )}`;
+      return `${this.value.slice(0, 6)}...${this.value.slice(-4)}`;
     },
   },
   watch: {
@@ -53,12 +50,16 @@ export default {
     createClipboard() {
       // eslint-disable-next-line no-new
       this.clipboardInstance = new Clipboard('.base-eth-address__action', {
-        text: () => this.value,
+        text: () => this.getValue(),
       });
     },
     destroyClipboard() {
       this.clipboardInstance.destroy();
       this.clipboardInstance = null;
+    },
+
+    getValue() {
+      return this.value;
     },
   },
 };
