@@ -45,9 +45,6 @@ const createHandler = (
       if (this[afterAction]) {
         this[afterAction].call(this);
       }
-    } else {
-      // eslint-disable-next-line no-console
-      console.error('Form is not valid');
     }
   };
 
