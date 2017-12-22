@@ -1,6 +1,6 @@
 /* eslint-disable */
 import Vue from 'vue';
-import FormMixin from '@/common/mixins/form';
+import FormMixin from '@/common/mixins/form/';
 import { mount } from 'vue-test-utils';
 
 const beforeFormAction = sinon.spy();

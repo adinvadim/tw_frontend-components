@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import { mount } from 'vue-test-utils';
 
-import DjangoErrorMixin, { toVuetifyRule, fieldsListToObject, formErrors } from '@/common/mixins/djangoErrors';
+import DjangoErrorMixin, { toVuetifyRule, fieldsListToObject, formErrors } from '@/common/mixins/djangoErrors/';
 
 const fields = ['fieldA', 'fieldB'];
 

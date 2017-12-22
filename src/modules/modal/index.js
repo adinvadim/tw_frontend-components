@@ -1,4 +1,4 @@
-import ModalContainerFabric from './TheModalContainerFabric';
+import ModalContainerFactory from './TheModalContainerFactory';
 import modalStore from './store';
 
 export default (Vue, { store, modals }) => {
@@ -7,5 +7,5 @@ export default (Vue, { store, modals }) => {
   }
 
   store.registerModule('modal', modalStore);
-  Vue.component('tw-modal-container', ModalContainerFabric(modals));
+  Vue.component('tw-modal-container', ModalContainerFactory(modals));
 };

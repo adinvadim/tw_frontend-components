@@ -1,5 +1,5 @@
 /* eslint-disable */
-import BaseEthAddress from '@/common/components/BaseEthAddress/BaseEthAddress';
+import BaseEthAddress from './BaseEthAddress';
 import { mount } from 'vue-test-utils';
 
 const template =
