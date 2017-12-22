@@ -2,29 +2,67 @@
 
 > Components library of takewing.co
 
-## Build Setup
+## Установка
 
 ``` bash
-# install dependencies
-npm install
+npm install -S ssh://git@10.8.0.22:9155/services/tw_frontend-components.git
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
+
+## Использование
+``` js
+// main.js
+import Vue from 'vue';
+import MyModal from '../MyModal';
+import Components from '@tw-core/components';
+
+//установит глобально все компоненты из библиотеки
+Vue.use(Components, {
+  store,
+  modals: {
+    myModal: MyModal,
+  },
+});
+```
+
+
+## Установка нужных компонентов
+``` js
+// main.js
+import Vue from 'vue';
+import MyModal from '../MyModal';
+
+//eth-address
+import { EthAddressComponent } from '@tw-core/components';
+
+Vue.use(EthAddressComponent); // компонент доступен глобально как <tw-eth-address />
+
+//shortpoll
+import { ShortpollComponent } from '@tw-core/components';
+
+Vue.use(ShortpollComponent); // <tw-shortpoll />
+
+//modal
+import { ModalContainer } from '@tw-core/components';
+
+Vue.use(ModalContainer, { // <tw-modal-container />
+  store,
+  modals: { 
+    MyModal,
+  },
+}); 
+
+```
+
+## Миксины
+``` js
+//some-component-js
+import { FormMixin } from '@tw-core/components';
+
+export default {
+  mixins: [FormMixin],
+};
+```
+
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
