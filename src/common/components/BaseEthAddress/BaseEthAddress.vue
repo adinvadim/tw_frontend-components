@@ -1,8 +1,8 @@
 <template>
-  <v-chip class="base-eth-address subheading">
+  <v-chip class="eth-address subheading">
     {{ truncated }}
-    <v-tooltip v-if="isCopy" class="ml-2" right>
-      <v-icon slot="activator" class="base-eth-address__action">content_copy</v-icon>
+    <v-tooltip v-if="isCopy" right>
+      <v-icon slot="activator" class="eth-address__action">content_copy</v-icon>
       Копировать в буфер обмена
     </v-tooltip>
   </v-chip>
@@ -49,7 +49,7 @@ export default {
   methods: {
     createClipboard() {
       // eslint-disable-next-line no-new
-      this.clipboardInstance = new Clipboard('.base-eth-address__action', {
+      this.clipboardInstance = new Clipboard('.eth-address__action', {
         text: () => this.getValue(),
       });
     },
@@ -68,9 +68,9 @@ export default {
 <style lang="stylus">
 .base-eth-address {
   display: inline-flex;
-  font-size: 16px;
 
   &__action {
+    margin-left: 8px;
     &:hover {
       cursor: pointer;
     }

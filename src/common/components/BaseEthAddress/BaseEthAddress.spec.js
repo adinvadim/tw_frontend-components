@@ -8,8 +8,9 @@ describe('BaseEthAddress', () => {
   it('classes', done => {
     const wrapper = mount(BaseEthAddress, { propsData: { value: '0xepwoqjfjwefoiwjiefj[pqwief' }});
 
-    expect(wrapper.classes()).to.contain('base-eth-address');
-    expect(wrapper.find('.base-eth-address__action').element).to.exist;
+    expect(wrapper.classes()).to.contain('eth-address');
+    expect(wrapper.find('.eth-address__action').element).to.exist;
+    expect(wrapper.find('.eth-address__action').text() === 'content_copy').to.be.equal(true);
     done();
   });
 
@@ -27,7 +28,7 @@ describe('BaseEthAddress', () => {
     const wrapper = mount(BaseEthAddress, { propsData: { value, isCopy: false }});
     const test = wrapper.vm.getValue()
 
-    expect(wrapper.find('.base-eth-address__action').element).to.not.exist;
+    expect(wrapper.find('.eth-address__action').element).to.not.exist;
     done();
   });
 

@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <img src="./common/assets/logo.png">
-  </div>
+  <div id="app" />
 </template>
 
 <script>
