@@ -8,7 +8,14 @@ import modalContainer from './modules/modal';
 
 export const FormMixin = formMixin;
 export const DjangoErrorsMixins = djangoErrorsMixins;
+export const ModalMixin = modalMixin;
 export const ShortpollComponent = shortpollComponent;
 export const EthAddressComponent = ethAddressComponent;
-export const ModalMixin = modalMixin;
 export const ModalContainer = modalContainer;
+
+export default (Vue) => {
+  Vue.use(ShortpollComponent);
+  Vue.use(EthAddressComponent);
+  Vue.use(ModalContainer);
+};
+
