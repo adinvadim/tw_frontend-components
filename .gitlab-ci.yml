@@ -5,6 +5,6 @@ build:
         - merge-requests
         
     script:
-        - echo 'Test CI'
+        - echo "Test CI"
         - npm install
         - npm run unit
