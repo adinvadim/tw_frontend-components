@@ -1,0 +1,9 @@
+build:
+
+    only:
+        - master
+        - merge-requests
+        
+    script:
+        - npm install
+        - npm run unit
