@@ -1,13 +1,14 @@
 {
   "name": "@tw-core/components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Components library of takewing.co",
   "author": "tusaeff <tusaeff@yandex.ru>",
   "main": "dist/components.js",
   "private": false,
   "license": "MIT",
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "scripts": {
     "prepublishOnly": "npm run build",
